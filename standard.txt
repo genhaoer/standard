@@ -1,0 +1,164 @@
+1、命名规范
+
+ （1）项目、文件命名全部采用小写方式， 以下划线分隔（尽量用英文语义化）。
+
+	例：my_project_name
+
+ （2）目录命名尽量复数命名。
+
+    例：scripts, styles, images, data_models
+
+
+2、HTML书写规范
+
+ （1）缩进使用soft tab（4个空格）；
+
+ （2）嵌套的节点应该缩进；
+
+ （3）在属性上，使用双引号，不要使用单引号；
+
+ （4）标签该闭合的一定要闭合（尽量使用HTML的严格模式）
+
+ （5）少用一些已经废弃的标签。例如：basefont、big、center、frameset、frame、noframes等。
+
+ （6）尽量使用语义化标签（前提是要考虑浏览器兼容），尽量加上标签的属性。例如：title、alt等
+
+ （7）启用HTML标准模式，头部标明doctype。HTML5 doctype
+
+ （8）字符编码一律用“utf-8”
+
+ （9）一律采用IE兼容模式。<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+ （10）根据HTML5规范, 通常在引入CSS和JS时不需要指明 type。
+
+ （11）标签属性顺序。
+
+	属性应该按照特定的顺序出现以保证易读性；
+
+	   1、class
+	   2、id
+	   3、name
+	   4、data-*
+	   5、src, for, type, href, value , max-length, max, min, pattern
+	   6、placeholder, title, alt
+	   7、aria-*, role
+	   8、required, readonly, disabled
+
+	class是为高可复用组件设计的，所以应处在第一位；
+
+	id更加具体且应该尽量少使用，所以将它放在第二位。
+
+ （12）少使用js生成标签。
+
+ （13）在编写HTML代码时，需要尽量避免多余的父节点，很多时候，需要通过迭代和重构来使HTML变得更少。
+
+
+
+ 3、CSS书写规范
+
+ （1）使用soft tab（4个空格），每个属性后面都加上分号。
+
+ 	例如：.element {
+		    position: absolute;
+		    top: 10px;
+		    left: 10px;
+
+		    border-radius: 10px;
+		    width: 50px;
+		    height: 50px;
+		}
+
+ （2）最外层统一使用双引号；url的内容要用引号；属性选择器中的属性值需要引号。	
+
+ （3）命名
+
+    1、类名使用小写字母，以中划线分隔
+
+    2、id采用驼峰式命名
+
+    3、scss中的变量、函数、混合、placeholder采用驼峰式命名
+
+    例如：/* class */
+		.element-content {
+		    ...
+		}
+
+		/* id */
+		#myDialog {
+		    ...
+		}
+
+ (4)相关的属性声明按右边的顺序做分组处理，组之间需要有一个空行。
+
+ 	例如：.declaration-order {
+		    display: block;
+		    float: right;
+
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    z-index: 100;
+
+		    border: 1px solid #e5e5e5;
+		    border-radius: 3px;
+		    width: 100px;
+		    height: 100px;
+
+		    font: normal 13px "Helvetica Neue", sans-serif;
+		    line-height: 1.5;
+		    text-align: center;
+
+		    color: #333;
+		    background-color: #f5f5f5;
+
+		    opacity: 1;
+		}
+
+（5）浏览器前缀顺序。
+
+   例如："-webkit-transition",
+         "-moz-transition",
+         "-ms-transition",
+         "-o-transition",
+         "transition",
+
+
+（6）媒体查询：尽量将媒体查询的规则靠近与他们相关的规则，不要将他们一起放到一个独立的样式文件中，
+
+	 或者丢在文档的最底部，这样做只会让大家以后更容易忘记他们。
+
+
+
+4、JavaScript命名规范
+
+ （1）使用soft tab（4个空格）。
+
+   例如：var x = 1,
+		     y = 1;
+
+		if (x < y) {
+		    x += 10;
+		} else {
+		    x += 1;
+		}
+
+
+ （2）函数书写规范
+
+ 	例如：
+
+ 	function name（）{
+ 	
+ 	var a；
+
+ 	....
+
+ 	}
+
+
+
+	
+
+
